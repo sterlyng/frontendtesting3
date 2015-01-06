@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>frontendtesting3</Name>
+    <RootNamespace>frontendtesting3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d651d958-14fa-41bf-97f2-fb9ff0e889db</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>js\App.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="js\App.js" />
+    <Compile Include="js\ClassifiesTriangles.js" />
+    <Compile Include="js\DomTriangle.js" />
+    <Compile Include="specs\AppSpec.js" />
+    <Compile Include="specs\ClassifiesTriangleSpec.js" />
+    <Compile Include="specs\DomTriangleSpec.js" />
+    <Compile Include="specs\lib\jasmine-fixture.js" />
+    <Compile Include="specs\lib\jquery-1.11.2.min.js" />
+    <Content Include="circle.yml" />
+    <Content Include="divshot.json" />
+    <Content Include="Gruntfile.coffee" />
+    <Content Include="grunt\contrib-clean.coffee" />
+    <Content Include="grunt\contrib-concat.coffee" />
+    <Content Include="grunt\contrib-connect.coffee" />
+    <Content Include="grunt\contrib-copy.coffee" />
+    <Content Include="grunt\contrib-jasmine.coffee" />
+    <Content Include="grunt\contrib-watch.coffee" />
+    <Content Include="grunt\uglify.coffee" />
+    <Content Include="package.json" />
+    <Content Include="public\index.html" />
+    <Content Include="README.md" />
+    <Content Include="_SpecRunner.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="grunt\" />
+    <Folder Include="js\" />
+    <Folder Include="public\" />
+    <Folder Include="specs\" />
+    <Folder Include="specs\lib\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>
